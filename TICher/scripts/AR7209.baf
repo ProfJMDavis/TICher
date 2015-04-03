@@ -1,0 +1,12 @@
+
+IF %BGT_VAR%
+  Global("TICheril","GLOBAL",9)
+	!Dead("TICher")
+	!Exists("TICher")
+
+THEN
+  RESPONSE #100
+    SetGlobal("TICheril","GLOBAL",10)
+        CreateCreature("TICher",[131.440],%FACE_13%)
+        Continue ()
+END

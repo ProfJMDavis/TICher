@@ -1,0 +1,12 @@
+
+IF %BGT_VAR%
+  Global("TICherTent","GLOBAL",1)
+	!Dead("TICher")
+	!Exists("TICher")
+
+THEN
+  RESPONSE #100
+    SetGlobal("TICherTent","GLOBAL",2)
+        CreateCreature("TICher",[385.265],%FACE_4%)
+        Continue ()
+END
