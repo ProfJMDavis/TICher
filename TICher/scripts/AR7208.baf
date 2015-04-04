@@ -1,0 +1,12 @@
+
+IF %BGT_VAR%
+  Global("TIGeoff","GLOBAL",0)
+	!Dead("TIGeoff")
+	!Exists("TIGeoff")
+
+THEN
+  RESPONSE #100
+    SetGlobal("TIGeoff","GLOBAL",1)
+        CreateCreature("TIGeoff",[522.577],%FACE_15%)
+        Continue ()
+END
