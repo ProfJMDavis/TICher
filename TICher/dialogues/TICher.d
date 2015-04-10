@@ -82,7 +82,8 @@ SAY~You leaving does explain why Ulraunt was so happy when he informed me that m
 END
 
 IF ~~ THEN BEGIN m4
-SAY~Just being willing to teach you was enough. He thought you didn't deserve to be here, let alone get an education--but he hated me anyway because he has no respect for anyone who would spend their time studying the literature of love: songs and poetry about the ways of the heart. The thirty years I've spent here studying would have been wonderful if I hadn't had Ulraunt hanging over me the whole time, sneering.~
+SAY~Just being willing to teach you was enough. He thought you didn't deserve to be here, let alone get an education--but he hated me anyway because he has no respect for anyone who would spend their time studying the literature of love: songs and poetry about the ways of the heart.~
+=~The thirty years I've spent here studying would have been wonderful if I hadn't had Ulraunt hanging over me the whole time, sneering.~
 ++ ~Yeah, well, that's Ulraunt for you.~ + m4a
 ++ ~Thirty years? Then you must be... gods... at least fifty. I didn't realize you were that old.~ + m4b
 ++ ~So do you have a favorite story about here?~ + m4c
@@ -96,7 +97,8 @@ SAY~Tell me one thing, <CHARNAME>... I feel like we've had some fun times togeth
 END
 
 IF ~~ THEN BEGIN m4b
-SAY~*Laughs.* Actually, I'm eighty, <CHARNAME>. An incomprehensible age to one as young as you. My elven father was only able give me one thing: when he bedded my human mother, he gave me the potential for a long life. Mama's been gone nigh thirty years now and I am still as young as you. Such is the end result of elvish blood. But tell me one thing, <CHARNAME>... I feel like we've had some fun times together looking over the old works. I have to ask you, now that those times are over, will... will you miss our time together... and me?~
+SAY~*Laughs.* Actually, I'm eighty, <CHARNAME>. An incomprehensible age to one as young as you. My elven father was only able give me one thing: when he bedded my human mother, he gave me the potential for a long life. Mama's been gone nigh thirty years now and I am still as young as you.~
+=~Such is the end result of elvish blood. But tell me one thing, <CHARNAME>... I feel like we've had some fun times together looking over the old works. I have to ask you, now that those times are over, will... will you miss our time together... and me?~
 ++ ~You know I will, Cherilane. Both the poetry we studied and you.~ + m5
 ++ ~Not the poetry. I didn't like a lot of it. But I'll miss you.~ + m5.1
 ++ ~*Laugh.* You're as crazy as everyone else around here. I'm going to just shake the dust of Candlekeep off my feet and forget I was ever here.~ + m5.2
@@ -124,14 +126,18 @@ And seek with pain their ever-during night.'~
 END
 
 IF ~~ THEN BEGIN m4d
-SAY~Heh! Calling him a 'bastard' assumes he had parents. I thought he merely grew like a mold from under a rock somewhere dark... Just being willing to teach you was enough for him to hate me--he thought you didn't deserve to be here, let alone get an education--but he especially hated me because he has no respect for anyone who would spend their time studying the literature of love: songs and poetry about the ways of the heart. The thirty years I've spent here studying would have been wonderful if I hadn't had Ulraunt hanging over me the whole time, sneering.~
+SAY~Heh! Calling him a 'bastard' assumes he had parents. I thought he merely grew like a mold from under a rock somewhere dark... Just being willing to teach you was enough for him to hate me. He thought you didn't deserve to be here, let alone get an education.~
+=~But he especially hated me because he has no respect for anyone who would spend their time studying the literature of love: songs and poetry about the ways of the heart.~
+=~The thirty years I've spent here studying would have been wonderful if I hadn't had Ulraunt hanging over me the whole time, sneering.~
 ++ ~Yeah, well, that's Ulraunt for you.~ + m4a
 ++ ~Thirty years? Then you must be... gods... at least fifty. I didn't realize you were that old.~ + m4b
 ++ ~So do you have a favorite story about here?~ + m4c
 END
 
 IF ~~ THEN BEGIN m4e
-SAY~Thank you. It's a high compliment to hear that I made something difficult easier for you. On the other hand, my fondness for you seems to have encouraged him to hate me even more than my subject. Just being willing to teach you was enough for him to hate me--he thought you didn't deserve to be here, let alone get an education--but he especially hated me because he has no respect for anyone who would spend their time studying the literature of love: songs and poetry about the ways of the heart. The thirty years I've spent here studying would have been wonderful if I hadn't had Ulraunt hanging over me the whole time, sneering.~
+SAY~Thank you. It's a high compliment to hear that I made something difficult easier for you. On the other hand, my fondness for you seems to have encouraged him to hate me even more than my subject. Just being willing to teach you was enough for him to hate me.~
+=~He thought you didn't deserve to be here, let alone get an education. But he especially hated me because he has no respect for anyone who would spend their time studying the literature of love: songs and poetry about the ways of the heart.~
+=~The thirty years I've spent here studying would have been wonderful if I hadn't had Ulraunt hanging over me the whole time, sneering.~
 ++ ~Yeah, well, that's Ulraunt for you.~ + m4a
 ++ ~Thirty years? Then you must be... gods... at least fifty. I didn't realize you were that old.~ + m4b
 ++ ~So do you have a favorite story about here?~ + m4c
@@ -145,7 +151,8 @@ END
 
 
 IF ~~ THEN BEGIN m5
-SAY~I know this will sound forward, but the past few years have been wonderful for me. You've come of age... You now appreciate all the little things that I've always loved in poetry and song. Only yesterday, I was remarking to Phlydia how enjoyable it is to teach you and share the great works: Rincehtë, Hûneth, Baran, Braig, Teli... Oh! And so many others! But now it's all over, apparently, and I'm just not ready to let go...~
+SAY~I know this will sound forward, but the past few years have been wonderful for me. You've come of age... You now appreciate all the little things that I've always loved in poetry and song.~
+=~Only yesterday, I was remarking to Phlydia how enjoyable it is to teach you and share the great works: Rincehtë, Hûneth, Baran, Braig, Teli... Oh! And so many others! But now it's all over, apparently, and I'm just not ready to let go...~
 ++ ~It's not forward. I've... I've enjoyed our classes, too. And my time with you. What do you propose we do?~ + m5a
 ++ ~Are you saying you have feelings for me, Cherilane?~ + m5a1
 ++ ~You're making me feel weird, Cherilane. You know... the age difference and having been my teacher...~ + m5a2

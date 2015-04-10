@@ -6,8 +6,8 @@ IF ~Global("TIGeoff","GLOBAL",1)~ THEN BEGIN a1
 SAY~Can I help you?~
 ++ ~Uh, no. Thanks.~ + a1a
 ++ ~I'm here for the party.~ + a1b
-+ ~Global("TICheril","GLOBAL",9)~ + ~Who are you?~ + a1c
-+ ~Global("TICheril","GLOBAL",9)~ + ~I'm looking for a friend of mine. Her name is Cherilane. She said she might be working here.~ + a1d
++ ~Global("TICheril","GLOBAL",10)~ + ~Who are you?~ + a1c
++ ~Global("TICheril","GLOBAL",10)~ + ~I'm looking for a friend of mine. Her name is Cherilane. She said she might be working here.~ + a1d
 END
 
 IF ~~ THEN BEGIN a1a

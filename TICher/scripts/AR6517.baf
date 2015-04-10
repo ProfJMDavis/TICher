@@ -1,6 +1,7 @@
 
 IF %BGT_VAR%
   Global("TICheril","GLOBAL",2)
+  Global("TICherYes","GLOBAL",1)
 	!Dead("TICher4")
 	!Exists("TICher4")
 
