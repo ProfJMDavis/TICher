@@ -24,6 +24,27 @@ ACTION_IF GAME_IS ~bgt~ THEN BEGIN
 END ELSE BEGIN FAIL ~Please install on BGEE, Tutu or BGT.~
 END
 
+ /* Face orientation for CreateCreature([xxx.yyy]%FACE_x%) */
+    OUTER_SPRINT ~FACE_0~ ~,0~
+    OUTER_SPRINT ~FACE_1~ ~,1~
+    OUTER_SPRINT ~FACE_2~ ~,2~
+    OUTER_SPRINT ~FACE_3~ ~,3~
+    OUTER_SPRINT ~FACE_4~ ~,4~
+    OUTER_SPRINT ~FACE_5~ ~,5~
+    OUTER_SPRINT ~FACE_6~ ~,6~
+    OUTER_SPRINT ~FACE_7~ ~,7~
+    OUTER_SPRINT ~FACE_8~ ~,8~
+    OUTER_SPRINT ~FACE_9~ ~,9~
+    OUTER_SPRINT ~FACE_10~ ~,10~
+    OUTER_SPRINT ~FACE_11~ ~,11~
+    OUTER_SPRINT ~FACE_12~ ~,12~
+    OUTER_SPRINT ~FACE_13~ ~,13~
+    OUTER_SPRINT ~FACE_14~ ~,14~
+    OUTER_SPRINT ~FACE_15~ ~,15~
+    OUTER_SPRINT ~FACE_16~ ~,16~
+
+	OUTER_SPRINT ~tutu_var~ ~~
+
 // Fixing Imoen's dialogue file
   /* Tutu: Giving Imoen a banter file entry in the interdi.2da */
   ACTION_IF FILE_EXISTS_IN_GAME ~FW0100.are~ THEN BEGIN
@@ -138,37 +159,57 @@ SET_2DA_ENTRY 2 2 2 ~Blank.mus~
 COPY ~TICher/Audio~ ~override~
 
 //TICher.cre
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY ~TICher/images/bgee/TICherS.bmp~ ~override/TICherS.bmp~
+END ELSE BEGIN
+COPY ~TICher/images/TICherS.bmp~ ~override/TICherS.bmp~
+END
 
-COPY_EXISTING ~TICher/creatures/TICher.cre~ ~override~  //probably will turn into bg1re/.. later
+COPY ~TICher/creatures/TICher.cre~ ~override~  //probably will turn into bg1re/.. later
   SAY INITIAL_MEETING ~Yes?~ [TIChf]
   SAY SELECT_COMMON1 ~Yes?~ [TIChf]
   SAY NAME1 ~Cherilane~
   SAY NAME2 ~Cherilane~
-  WRITE_ASCII 0x248 ~TICher~ #8  //override script
+  WRITE_EVALUATED_ASCII 0x248 ~INITDLG~ #8  //override script
   WRITE_ASCII 0x280 ~TICher~ #32  //DV
   WRITE_ASCII 0x2cc ~TICher~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~TICherS~ #8   //small portrait
-  WRITE_EVALUATED_ASCII 0x250 ~%tutu_var%SHOUT~ #8   // Class script
+  WRITE_EVALUATED_ASCII 0x250 ~TICHER1~ #8   // Class script
   WRITE_EVALUATED_ASCII 0x258 ~%tutu_scripts%EEENEMY~ #8   // Race script
   WRITE_EVALUATED_ASCII 0x268 ~%tutu_scriptw%TASIGHT~ #8   // Default script
+  WRITE_BYTE 0x2c 30 // Metal color
+  WRITE_BYTE 0x2d 58 // Minor color
+  WRITE_BYTE 0x2e 58 // Major color
+  WRITE_BYTE 0x2f 12 // Skin color
+  WRITE_BYTE 0x30 16 // Leather color
+  WRITE_BYTE 0x31 30 // Armor color
+  WRITE_BYTE 0x32 0 // Hair color
 
-COPY_EXISTING ~TICher/creatures/TICher4.cre~ ~override~  //probably will turn into bg1re/.. later
+
+COPY ~TICher/creatures/TICher4.cre~ ~override~  //probably will turn into bg1re/.. later
   SAY INITIAL_MEETING ~Yes?~ [TIChf]
   SAY SELECT_COMMON1 ~Yes?~ [TIChf]
   SAY NAME1 ~Cherilane~
   SAY NAME2 ~Cherilane~
-  WRITE_ASCII 0x248 ~TICher~ #8  //override script
+  WRITE_EVALUATED_ASCII 0x248 ~SHOUT~ #8  //override script
   WRITE_ASCII 0x280 ~TICher~ #32  //DV
   WRITE_ASCII 0x2cc ~TICher~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~TICherS~ #8   //small portrait
-  WRITE_EVALUATED_ASCII 0x250 ~%tutu_var%SHOUT~ #8   // Class script
+  WRITE_EVALUATED_ASCII 0x250 ~TICher~ #8   // Class script
   WRITE_EVALUATED_ASCII 0x268 ~%tutu_scriptw%TASIGHT~ #8   // Default script
+  WRITE_BYTE 0x2c 30 // Metal color
+  WRITE_BYTE 0x2d 58 // Minor color
+  WRITE_BYTE 0x2e 58 // Major color
+  WRITE_BYTE 0x2f 12 // Skin color
+  WRITE_BYTE 0x30 16 // Leather color
+  WRITE_BYTE 0x31 30 // Armor color
+  WRITE_BYTE 0x32 0 // Hair color
 
 //TIGeoff.cre
-COPY_EXISTING ~TICher/creatures/TIGeoff.cre~ ~override~  //probably will turn into bg1re/.. later
+COPY ~TICher/creatures/TIGeoff.cre~ ~override~  //probably will turn into bg1re/.. later
   SAY NAME1 ~Geoff~
   SAY NAME2 ~Geoff~
-  WRITE_ASCII 0x248 ~%tutu_var%SHOUT~ #8  //override script
+  WRITE_ASCII 0x248 ~%tutu_script%SHOUT~ #8  //override script
   WRITE_ASCII 0x280 ~TIGeoff~ #32  //DV
   WRITE_ASCII 0x2cc ~TIGeoff~ #8   //pre-joining dialogue file
   WRITE_EVALUATED_ASCII 0x250 ~%tutu_scriptr%UNENEMY~ #8   // Class script
@@ -196,6 +237,7 @@ END
 
 COMPILE EVALUATE_BUFFER ~TICher/dialogues/TIGeoff.d~
 COMPILE EVALUATE_BUFFER ~TICher/dialogues/TICher.d~
+COMPILE EVALUATE_BUFFER ~TICher/scripts/TICher1.baf~
 COMPILE EVALUATE_BUFFER ~TICher/scripts/TICher1c.baf~
 
 //Component: This is adding our area files to the game
