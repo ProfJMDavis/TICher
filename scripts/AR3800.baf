@@ -1,0 +1,28 @@
+// When it's daytime, and Cherilane has not been spoken to at Nashkel Carnival...
+
+IF %BGT_VAR%
+  TimeOfDay(DAY)
+  Global("TICheril","GLOBAL",5)
+  !Dead("TICher")
+  !Exists("TICher")
+  GlobalLT("TICherilWork","GLOBAL",2) // DayNight toggle
+THEN
+  RESPONSE #100
+    SetGlobal("TICheril","GLOBAL",6)
+    SetGlobal("TICherilWork","GLOBAL",2)
+    CreateCreature("TICher",[1109.3387]%FACE_8%)
+    ActionOverride("TICher",Face(8))
+    Continue()
+END
+
+// Cherilane should not appear at night...
+
+IF
+  TimeOfDay(NIGHT)
+THEN
+  RESPONSE #100
+    SetGlobal("TICherilWork","GLOBAL",1) // DayNight toggle
+    SetGlobal("TICheril","GLOBAL",5)
+    ActionOverride("TICher",DestroySelf())
+    Continue()
+END
