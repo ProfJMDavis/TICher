@@ -59,6 +59,6 @@ IF ~~ THEN + a3a_01
 END
 
 IF ~~ THEN BEGIN a3a_01
-SAY~I shouldn't say anymore. You can go ahead and talk to her. She's in the master bedroom on the third floor.~
+SAY~I shouldn't say anymore. You can go ahead and talk to her. She's in the master bedroom.~
 IF ~~ THEN DO ~IncrementGlobal("TIGeoff","GLOBAL",1)~ EXIT
 END

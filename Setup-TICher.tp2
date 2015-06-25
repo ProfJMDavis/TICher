@@ -178,12 +178,12 @@ COPY ~TICher/creatures/TICher.cre~ ~override~  //probably will turn into bg1re/.
   WRITE_EVALUATED_ASCII 0x258 ~%tutu_scripts%EEENEMY~ #8   // Race script
   WRITE_EVALUATED_ASCII 0x268 ~%tutu_scriptw%TASIGHT~ #8   // Default script
   WRITE_BYTE 0x2c 30 // Metal color
-  WRITE_BYTE 0x2d 58 // Minor color
-  WRITE_BYTE 0x2e 58 // Major color
+  WRITE_BYTE 0x2d 44 // Minor color
+  WRITE_BYTE 0x2e 44 // Major color
   WRITE_BYTE 0x2f 12 // Skin color
   WRITE_BYTE 0x30 16 // Leather color
   WRITE_BYTE 0x31 30 // Armor color
-  WRITE_BYTE 0x32 0 // Hair color
+  WRITE_BYTE 0x32 8 // Hair color
 
 
 COPY ~TICher/creatures/TICher4.cre~ ~override~  //probably will turn into bg1re/.. later
@@ -198,22 +198,29 @@ COPY ~TICher/creatures/TICher4.cre~ ~override~  //probably will turn into bg1re/
   WRITE_EVALUATED_ASCII 0x250 ~TICher~ #8   // Class script
   WRITE_EVALUATED_ASCII 0x268 ~%tutu_scriptw%TASIGHT~ #8   // Default script
   WRITE_BYTE 0x2c 30 // Metal color
-  WRITE_BYTE 0x2d 58 // Minor color
-  WRITE_BYTE 0x2e 58 // Major color
+  WRITE_BYTE 0x2d 44 // Minor color
+  WRITE_BYTE 0x2e 44 // Major color
   WRITE_BYTE 0x2f 12 // Skin color
   WRITE_BYTE 0x30 16 // Leather color
   WRITE_BYTE 0x31 30 // Armor color
-  WRITE_BYTE 0x32 0 // Hair color
+  WRITE_BYTE 0x32 8 // Hair color
 
 //TIGeoff.cre
 COPY ~TICher/creatures/TIGeoff.cre~ ~override~  //probably will turn into bg1re/.. later
   SAY NAME1 ~Geoff~
   SAY NAME2 ~Geoff~
-  WRITE_ASCII 0x248 ~%tutu_script%SHOUT~ #8  //override script
+  WRITE_ASCII 0x248 ~SHOUT~ #8  //override script
   WRITE_ASCII 0x280 ~TIGeoff~ #32  //DV
   WRITE_ASCII 0x2cc ~TIGeoff~ #8   //pre-joining dialogue file
   WRITE_EVALUATED_ASCII 0x250 ~%tutu_scriptr%UNENEMY~ #8   // Class script
   WRITE_EVALUATED_ASCII 0x268 ~%tutu_scriptw%TRUNSGT~ #8   // Default script
+  WRITE_BYTE 0x2c 27 // Metal color
+  WRITE_BYTE 0x2d 46 // Minor color
+  WRITE_BYTE 0x2e 17 // Major color
+  WRITE_BYTE 0x2f 12 // Skin color
+  WRITE_BYTE 0x30 17 // Leather color
+  WRITE_BYTE 0x31 20 // Armor color
+  WRITE_BYTE 0x32 9 // Hair color
 
 //Rats Fix
 
